@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Letras del Tesoro — 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:       #F4F6FA;
+  --surface:  #FFFFFF;
+  --surface-2:#F0F3F8;
+  --surface-3:#E8EDF5;
+  --border:   #DDE2EE;
+  --border-2: #C8D0E2;
+  --text-1:   #111827;
+  --text-2:   #5A6480;
+  --text-3:   #9BA3BA;
+  --blue:     #2563EB;
+  --blue-d:   #1D4ED8;
+  --blue-l:   rgba(37,99,235,0.08);
+  --blue-m:   rgba(37,99,235,0.18);
+  --red:      #DC2626;
+  --red-d:    #B91C1C;
+  --red-l:    rgba(220,38,38,0.07);
+  --red-m:    rgba(220,38,38,0.16);
+  --green:    #059669;
+  --green-d:  #047857;
+  --green-l:  rgba(5,150,105,0.08);
+  --green-m:  rgba(5,150,105,0.18);
+  --amber:    #D97706;
+  --amber-l:  rgba(217,119,6,0.08);
+  --amber-m:  rgba(217,119,6,0.18);
+  --purple:   #7C3AED;
+  --purple-l: rgba(124,58,237,0.08);
+  --r: 12px;
+}
+body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text-1); -webkit-font-smoothing: antialiased; min-height: 100vh; }
+
+/* ── NAV ── */
+.nav {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 32px; height: 58px;
+  display: flex; align-items: center; gap: 12px;
+  position: sticky; top: 0; z-index: 200;
+}
+.nav-icon { width: 30px; height: 30px; background: var(--blue); border-radius: 7px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 700; flex-shrink: 0; }
+.nav-name  { font-size: 14px; font-weight: 600; color: var(--text-1); }
+.nav-sep   { width: 1px; height: 18px; background: var(--border); margin: 0 2px; }
+.nav-sub   { font-size: 13px; color: var(--text-2); }
+.nav-right { margin-left: auto; }
+
+/* ── TABS ── */
+.tabs { display: flex; gap: 2px; background: var(--surface-3); border-radius: 9px; padding: 3px; border: 1px solid var(--border); }
+.tab  { padding: 5px 16px; border-radius: 7px; font-size: 13px; font-weight: 500; color: var(--text-2); cursor: pointer; border: none; background: transparent; font-family: inherit; transition: all 0.15s; }
+.tab:hover  { color: var(--text-1); }
+.tab.active { background: var(--surface); color: var(--text-1); box-shadow: 0 1px 3px rgba(0,0,0,0.10); }
+
+/* ── LAYOUT ── */
+.main  { max-width: 1120px; margin: 0 auto; padding: 32px 24px 80px; }
+.page  { display: none; }
+.page.active { display: block; }
+.page-title { font-size: 22px; font-weight: 600; letter-spacing: -0.3px; margin-bottom: 4px; }
+.page-desc  { font-size: 13px; color: var(--text-2); margin-bottom: 24px; }
+.page-desc a { color: var(--blue); text-decoration: none; }
+.page-desc a:hover { text-decoration: underline; }
+
+/* ── STAT CARDS ── */
+.stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-bottom: 16px; }
+.stat  { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: 16px 18px; }
+.stat.hl { background: var(--blue-d); border-color: rgba(59,130,246,0.4); }
+.stat-lbl { font-size: 11px; color: var(--text-2); font-weight: 500; margin-bottom: 5px; letter-spacing: 0.02em; }
+.stat.hl .stat-lbl { color: rgba(255,255,255,0.65); }
+.stat-val { font-size: 26px; font-weight: 600; letter-spacing: -0.5px; line-height: 1; color: var(--text-1); }
+.stat.hl .stat-val { color: #fff; }
+.stat-sub { font-size: 11px; color: var(--text-3); margin-top: 3px; }
+.stat.hl .stat-sub { color: rgba(255,255,255,0.5); }
+
+/* ── NEXT BANNER ── */
+.next-banner {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--green);
+  border-radius: var(--r); padding: 13px 18px;
+  display: flex; align-items: center; gap: 14px; margin-bottom: 18px;
+}
+.ndot { width: 9px; height: 9px; border-radius: 50%; background: var(--green); flex-shrink: 0; box-shadow: 0 0 0 3px rgba(5,150,105,0.15); animation: pg 2s infinite; }
+@keyframes pg { 0%,100%{box-shadow:0 0 0 3px rgba(5,150,105,0.15)}50%{box-shadow:0 0 0 6px rgba(5,150,105,0.06)}}
+.nx-title  { font-size: 13px; font-weight: 500; color: var(--text-1); }
+.nx-detail { font-size: 12px; color: var(--text-2); margin-top: 2px; }
+.nx-chips  { display: flex; gap: 5px; margin-left: 8px; }
+.nx-days   { margin-left: auto; font-size: 13px; font-weight: 600; color: var(--green); white-space: nowrap; }
+
+/* ── TOOLBAR ── */
+.toolbar { display: flex; align-items: center; gap: 7px; margin-bottom: 14px; flex-wrap: wrap; }
+.toolbar-lbl { font-size: 12px; color: var(--text-2); margin-right: 2px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 13px; border-radius: 20px; border: 1px solid var(--border); background: var(--surface); font-size: 12px; font-weight: 500; color: var(--text-2); cursor: pointer; transition: all 0.12s; font-family: inherit; }
+.chip:hover { border-color: var(--blue); color: var(--blue); }
+.chip.active { background: var(--blue-l); border-color: var(--blue-m); color: var(--blue); }
+.cdot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+
+/* ── TABLE CARD ── */
+.tcard { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; }
+table  { width: 100%; border-collapse: collapse; }
+
+thead th {
+  font-size: 10px; font-weight: 600; color: var(--text-3);
+  text-transform: uppercase; letter-spacing: 0.08em;
+  padding: 0 20px; height: 36px; text-align: left;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-2);
+  white-space: nowrap;
+}
+thead th:last-child { text-align: right; }
+
+tbody tr { border-bottom: 1px solid var(--border); transition: background 0.1s; }
+tbody tr:last-child { border-bottom: none; }
+tbody tr:hover { background: var(--surface-2); }
+tbody tr.past { opacity: 0.65; }
+tbody tr.next-row { background: rgba(5,150,105,0.06); }
+tbody tr.next-row:hover { background: rgba(5,150,105,0.10); }
+tbody td { padding: 12px 20px; font-size: 13px; vertical-align: middle; }
+td:last-child { text-align: right; }
+
+/* date cell */
+.td-date { display: flex; align-items: center; gap: 10px; white-space: nowrap; }
+.date-num { font-size: 20px; font-weight: 600; letter-spacing: -0.5px; min-width: 26px; line-height: 1; color: var(--text-1); }
+.date-wd  { font-size: 11px; font-weight: 500; color: var(--text-2); }
+.date-mo  { font-size: 13px; font-weight: 500; color: var(--text-2); }
+
+/* date mini (for the 3 extra cols) */
+.date-mini { display: flex; flex-direction: column; gap: 1px; }
+.dm-main   { font-size: 13px; font-weight: 500; color: var(--text-1); }
+.dm-sub    { font-size: 10px; color: var(--text-3); }
+
+/* badges */
+.badges { display: flex; gap: 4px; flex-wrap: wrap; }
+.badge  { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 5px; }
+.badge-b { background: var(--blue-l);  color: var(--blue); border: 1px solid var(--blue-m); }
+.badge-r { background: var(--red-l);   color: var(--red);  border: 1px solid var(--red-m); }
+
+/* status badges */
+.sb      { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 20px; }
+.sb-past  { background: var(--surface-3); color: var(--text-3); }
+.sb-next  { background: var(--green-l); color: var(--green); border: 1px solid var(--green-m); }
+.sb-soon  { background: var(--amber-l); color: var(--amber); border: 1px solid var(--amber-m); }
+.sb-dot   { width: 5px; height: 5px; border-radius: 50%; background: currentColor; }
+
+/* month header */
+.mhdr td { padding: 8px 20px; font-size: 10px; font-weight: 600; color: var(--text-3); letter-spacing: 0.08em; text-transform: uppercase; background: var(--surface-2); border-bottom: 1px solid var(--border); }
+
+/* ── PORTFOLIO ── */
+.port-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-bottom: 20px; }
+
+/* form */
+.form-card  { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r); padding: 22px 24px; margin-bottom: 20px; }
+.form-title { font-size: 14px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 7px; color: var(--text-1); }
+.form-grid  { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr auto; gap: 10px; align-items: end; }
+.fgroup     { display: flex; flex-direction: column; gap: 5px; }
+.fgroup label { font-size: 11px; font-weight: 500; color: var(--text-2); letter-spacing: 0.02em; }
+.fgroup select, .fgroup input {
+  height: 36px; border: 1px solid var(--border); border-radius: 7px;
+  padding: 0 11px; font-size: 13px; font-family: inherit;
+  color: var(--text-1); background: var(--surface-3); outline: none;
+  transition: border-color 0.15s; width: 100%;
+}
+.fgroup select:focus, .fgroup input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(59,130,246,0.12); }
+.fgroup input::placeholder { color: var(--text-3); }
+.fgroup select option { background: var(--surface-2); }
+.btn-add { height: 36px; padding: 0 18px; background: var(--blue); color: #fff; border: none; border-radius: 7px; font-size: 13px; font-weight: 500; font-family: inherit; cursor: pointer; transition: background 0.15s; white-space: nowrap; }
+.btn-add:hover  { background: var(--blue-d); }
+.btn-add:active { transform: scale(0.98); }
+.form-err { font-size: 11px; color: var(--red); margin-top: 8px; display: none; }
+
+/* holdings */
+.btn-del { background: none; border: none; cursor: pointer; padding: 4px 7px; color: var(--text-3); border-radius: 6px; font-size: 14px; line-height: 1; transition: all 0.15s; font-family: inherit; }
+.btn-del:hover { color: var(--red); background: var(--red-l); }
+.empty-state { padding: 44px 24px; text-align: center; color: var(--text-3); font-size: 13px; line-height: 2; }
+.empty-state .eicon { font-size: 28px; display: block; margin-bottom: 8px; }
+
+/* timeline */
+.timeline     { padding: 22px 24px; margin-top: 14px; }
+.timeline-ttl { font-size: 14px; font-weight: 600; margin-bottom: 14px; color: var(--text-1); }
+.tl-item      { display: flex; align-items: center; gap: 16px; padding: 11px 0; border-bottom: 1px solid var(--border); }
+.tl-item:last-child { border-bottom: none; }
+.tl-date-col  { width: 80px; flex-shrink: 0; }
+.tl-date-big  { font-size: 16px; font-weight: 600; letter-spacing: -0.3px; color: var(--text-1); }
+.tl-date-sm   { font-size: 10px; color: var(--text-3); }
+.tl-bar-wrap  { flex: 1; }
+.tl-lbl       { font-size: 11px; color: var(--text-2); margin-bottom: 5px; display: flex; justify-content: space-between; }
+.tl-bar-bg    { height: 7px; border-radius: 4px; background: var(--surface-3); overflow: hidden; }
+.tl-bar-fill  { height: 100%; border-radius: 4px; transition: width 0.4s; }
+.tl-amount    { font-size: 13px; font-weight: 600; text-align: right; min-width: 90px; color: var(--text-1); }
+.tl-tag       { font-size: 10px; text-align: right; color: var(--text-3); margin-top: 2px; }
+
+/* status variants for portfolio */
+.sb-active   { background: var(--blue-l);   color: var(--blue);   border: 1px solid var(--blue-m); }
+.sb-maturing { background: var(--amber-l);  color: var(--amber);  border: 1px solid var(--amber-m); }
+.sb-matured  { background: var(--surface-3);color: var(--text-3); }
+
+.note { margin-top: 18px; font-size: 11px; color: var(--text-3); display: flex; align-items: flex-start; gap: 7px; line-height: 1.7; }
+
+/* ── RESPONSIVE ── */
+
+/* Tablet: 600–900px */
+@media(max-width:900px){
+  .stats,.port-stats { grid-template-columns:1fr 1fr; }
+  .form-grid { grid-template-columns:1fr 1fr; }
+  .form-grid .btn-add { grid-column:1/-1; }
+  .nav { padding:0 16px; }
+  .main { padding:24px 12px 60px; }
+  .col-lim,.col-emi,.col-amor { display:none; }
+  tbody td, thead th { padding:11px 14px; }
+  .nx-days,.nx-chips { display:none; }
+}
+
+/* Mobile: ≤600px — card-based layout, no tables */
+@media(max-width:600px){
+  /* Nav */
+  .nav { padding:0 14px; height:54px; gap:8px; }
+  .nav-name { display:none; }
+  .nav-sep  { display:none; }
+  .nav-sub  { font-size:12px; }
+  .tab { padding:5px 12px; font-size:12px; }
+
+  /* Layout */
+  .main { padding:18px 12px 72px; }
+  .page-title { font-size:18px; }
+  .page-desc  { font-size:12px; margin-bottom:16px; }
+
+  /* Stats: 2 col */
+  .stats, .port-stats { grid-template-columns:1fr 1fr; gap:8px; margin-bottom:14px; }
+  .stat { padding:13px 14px; }
+  .stat-val { font-size:22px; }
+
+  /* Next banner: stack */
+  .next-banner { flex-wrap:wrap; gap:10px; padding:12px 14px; }
+  .nx-days, .nx-chips { display:flex; }
+  .nx-days { margin-left:0; width:100%; font-size:12px; }
+  .nx-chips { margin-left:0; }
+  .nx-detail { font-size:11px; line-height:1.5; }
+
+  /* Filters: scroll row */
+  .toolbar { gap:6px; flex-wrap:nowrap; overflow-x:auto; padding-bottom:4px; scrollbar-width:none; }
+  .toolbar::-webkit-scrollbar { display:none; }
+  .toolbar-lbl { display:none; }
+  .chip { flex-shrink:0; padding:6px 12px; font-size:12px; }
+
+  /* ── CALENDAR: hide table, show cards ── */
+  #cal-table-wrap table { display:none; }
+
+  .cal-cards { display:flex; flex-direction:column; gap:1px; }
+  .cal-card  {
+    background:var(--surface);
+    padding:14px 16px;
+    border-bottom:1px solid var(--border);
+    transition:background .1s;
+  }
+  .cal-card:first-child { border-radius:var(--r) var(--r) 0 0; }
+  .cal-card:last-child  { border-radius:0 0 var(--r) var(--r); border-bottom:none; }
+  .cal-card.past { opacity:.65; }
+  .cal-card.next-row { background:rgba(5,150,105,0.06); }
+
+  .cal-card-top {
+    display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;
+  }
+  .cal-card-date {
+    display:flex; align-items:center; gap:10px;
+  }
+  .cal-card-dn  { font-size:26px; font-weight:600; letter-spacing:-0.5px; line-height:1; color:var(--text-1); }
+  .cal-card-dm  { display:flex; flex-direction:column; }
+  .cal-card-wd  { font-size:12px; font-weight:500; color:var(--text-2); }
+  .cal-card-mo  { font-size:11px; color:var(--text-3); }
+
+  .cal-card-dates {
+    display:grid; grid-template-columns:1fr 1fr 1fr;
+    gap:8px; margin-top:2px;
+    padding-top:10px;
+    border-top:1px solid var(--border);
+  }
+  .ccd-item { display:flex; flex-direction:column; gap:2px; }
+  .ccd-lbl  { font-size:9px; font-weight:600; color:var(--text-3); text-transform:uppercase; letter-spacing:.06em; }
+  .ccd-val  { font-size:12px; font-weight:500; color:var(--text-1); }
+
+  .cal-month-header {
+    background:var(--surface-2);
+    padding:8px 16px;
+    font-size:10px; font-weight:600; color:var(--text-3);
+    letter-spacing:.08em; text-transform:uppercase;
+    border-bottom:1px solid var(--border);
+  }
+  .cal-month-header:not(:first-child) { border-top:1px solid var(--border); }
+
+  /* ── PORTFOLIO: hide table, show cards ── */
+  #port-table-wrap table { display:none; }
+
+  .hold-cards { display:flex; flex-direction:column; gap:1px; }
+  .hold-card  {
+    background:var(--surface);
+    padding:14px 16px;
+    border-bottom:1px solid var(--border);
+    transition:background .1s;
+  }
+  .hold-card:first-child { border-radius:var(--r) var(--r) 0 0; }
+  .hold-card:last-child  { border-radius:0 0 var(--r) var(--r); border-bottom:none; }
+  .hold-card.past { opacity:.65; }
+
+  .hold-card-top { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:10px; }
+  .hold-card-title { font-size:14px; font-weight:600; color:var(--text-1); }
+  .hold-card-amount { font-size:16px; font-weight:700; color:var(--text-1); margin-top:2px; }
+  .hold-card-dates {
+    display:grid; grid-template-columns:1fr 1fr 1fr;
+    gap:8px; padding-top:10px; border-top:1px solid var(--border); margin-top:2px;
+  }
+  .hold-card-progress { margin-top:10px; }
+  .hold-card-prog-row { display:flex; align-items:center; gap:8px; margin-top:4px; }
+  .hold-card-prog-bar { flex:1; height:5px; border-radius:3px; background:var(--surface-3); overflow:hidden; }
+  .hold-card-prog-fill{ height:100%; border-radius:3px; transition:width .4s; }
+  .hold-card-bottom { display:flex; align-items:center; justify-content:space-between; margin-top:10px; }
+
+  /* Form: single column */
+  .form-card { padding:16px; }
+  .form-grid { grid-template-columns:1fr; }
+  .form-grid .btn-add { grid-column:1; margin-top:2px; height:42px; font-size:14px; }
+  .fgroup select, .fgroup input { height:42px; font-size:14px; }
+
+  /* Bottom tab bar replacement */
+  .nav .tabs { gap:1px; }
+  .tab { padding:5px 14px; }
+
+  /* Timeline */
+  .tl-item { gap:10px; }
+  .tl-date-col { width:52px; }
+  .tl-date-big { font-size:14px; }
+  .tl-amount   { min-width:75px; font-size:12px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-icon">T</div>
+  <span class="nav-name">Tesoro Público</span>
+  <div class="nav-sep"></div>
+  <span class="nav-sub">Letras del Tesoro · 2026</span>
+  <div class="nav-right">
+    <div class="tabs">
+      <button class="tab active" onclick="showTab('cal',this)">Calendario</button>
+      <button class="tab"        onclick="showTab('port',this)">Mi cartera</button>
+    </div>
+  </div>
+</nav>
+
+<main class="main">
+
+  <!-- ════════════ CALENDARIO ════════════ -->
+  <div class="page active" id="page-cal">
+    <h1 class="page-title">Calendario de subastas 2026</h1>
+    <p class="page-desc">Fuente oficial: <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-830" target="_blank">BOE-A-2026-830</a> · <a href="https://www.bde.es" target="_blank">Banco de España</a></p>
+
+    <div class="stats">
+      <div class="stat"><div class="stat-lbl">Total subastas</div><div class="stat-val">24</div><div class="stat-sub">Feb 2026 – Ene 2027</div></div>
+      <div class="stat"><div class="stat-lbl">Realizadas</div><div class="stat-val" id="s-past">—</div><div class="stat-sub">hasta hoy</div></div>
+      <div class="stat"><div class="stat-lbl">Pendientes</div><div class="stat-val" id="s-pend">—</div><div class="stat-sub">subastas restantes</div></div>
+      <div class="stat hl"><div class="stat-lbl">Próxima subasta</div><div class="stat-val" id="s-days">—</div><div class="stat-sub" id="s-next-lbl">—</div></div>
+    </div>
+
+    <div class="next-banner" id="next-banner" style="display:none">
+      <div class="ndot"></div>
+      <div><div class="nx-title" id="nx-title">—</div><div class="nx-detail" id="nx-detail">—</div></div>
+      <div class="nx-chips" id="nx-chips"></div>
+      <div class="nx-days" id="nx-days">—</div>
+    </div>
+
+    <div class="toolbar">
+      <span class="toolbar-lbl">Filtrar:</span>
+      <button class="chip active" onclick="setFilter('all',this)">Todas</button>
+      <button class="chip" onclick="setFilter('upcoming',this)"><span class="cdot" style="background:var(--green)"></span>Próximas</button>
+      <button class="chip" onclick="setFilter('6-12',this)"><span class="cdot" style="background:var(--red)"></span>6 y 12 meses</button>
+      <button class="chip" onclick="setFilter('3-9',this)"><span class="cdot" style="background:var(--blue)"></span>3 y 9 meses</button>
+    </div>
+
+    <div class="tcard" id="cal-table-wrap">
+      <table id="cal-table">
+        <thead><tr>
+          <th>Letras</th>
+          <th>Fecha subasta</th>
+          <th class="col-lim">Límite online</th>
+          <th class="col-emi">Fecha emisión</th>
+          <th class="col-amor">Amortización</th>
+          <th>Estado</th>
+        </tr></thead>
+        <tbody id="cal-body"></tbody>
+      </table>
+      <div id="cal-cards" class="cal-cards" style="display:none"></div>
+    </div>
+    <div class="note"><span>ⓘ</span><span>Peticiones online al menos 7 días antes, a través del Servicio de Compraventa del Tesoro. Presencial en Banco de España hasta las 14:00 h (13:00 h Canarias). Fechas sujetas a festividades locales.</span></div>
+  </div>
+
+  <!-- ════════════ CARTERA ════════════ -->
+  <div class="page" id="page-port">
+    <h1 class="page-title">Mi cartera de Letras</h1>
+    <p class="page-desc">Registra las subastas a las que has acudido, el importe invertido y su vencimiento.</p>
+
+    <div class="port-stats">
+      <div class="stat"><div class="stat-lbl">Capital invertido</div><div class="stat-val" id="p-total">—</div><div class="stat-sub">nominal total</div></div>
+      <div class="stat"><div class="stat-lbl">Posiciones abiertas</div><div class="stat-val" id="p-count">—</div><div class="stat-sub">subastas registradas</div></div>
+      <div class="stat"><div class="stat-lbl">Próximo vencimiento</div><div class="stat-val" id="p-next-days">—</div><div class="stat-sub" id="p-next-lbl">—</div></div>
+      <div class="stat hl"><div class="stat-lbl">Vence en 30 días</div><div class="stat-val" id="p-month">—</div><div class="stat-sub">importe próximo</div></div>
+    </div>
+
+    <div class="form-card">
+      <div class="form-title">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="var(--blue)" stroke-width="2"><circle cx="8" cy="8" r="7"/><line x1="8" y1="5" x2="8" y2="11"/><line x1="5" y1="8" x2="11" y2="8"/></svg>
+        Añadir posición
+      </div>
+      <div class="form-grid">
+        <div class="fgroup">
+          <label>Subasta</label>
+          <select id="f-subasta"></select>
+        </div>
+        <div class="fgroup">
+          <label>Importe nominal (€)</label>
+          <input type="text" id="f-importe" placeholder="10.000" inputmode="numeric" autocomplete="off">
+        </div>
+        <div class="fgroup">
+          <label>Fecha amortización</label>
+          <input type="date" id="f-venc">
+        </div>
+        <div class="fgroup">
+          <label>Notas (opcional)</label>
+          <input type="text" id="f-notas" placeholder="Ej: reinversión">
+        </div>
+        <button class="btn-add" onclick="addHolding()">Añadir</button>
+      </div>
+      <div class="form-err" id="form-err"></div>
+    </div>
+
+    <div class="tcard" id="port-table-wrap">
+      <table id="port-table">
+        <thead><tr>
+          <th>Subasta</th>
+          <th>Importe</th>
+          <th>F. Subasta</th>
+          <th>F. Emisión</th>
+          <th>Amortización</th>
+          <th>Progreso</th>
+          <th>Estado</th>
+          <th></th>
+        </tr></thead>
+        <tbody id="hold-body">
+          <tr><td colspan="8"><div class="empty-state"><span class="eicon">📋</span>Aún no has registrado ninguna posición.<br>Usa el formulario de arriba para añadir tu primera inversión.</div></td></tr>
+        </tbody>
+      </table>
+      <div id="hold-cards" class="hold-cards" style="display:none"></div>
+    </div>
+
+    <div class="tcard timeline" id="timeline-section" style="display:none">
+      <div class="timeline-ttl">Calendario de amortizaciones</div>
+      <div id="timeline-body"></div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+// ── DATA ──────────────────────────────────────────
+const DAYS   = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+const MONTHS = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+
+// Amortización = emisión + plazo meses (approx, oficialmente el BOE la publica)
+// Using official emission dates + plazo for amortización estimate
+function addMonths(d, m) {
+  const r = new Date(d); r.setMonth(r.getMonth() + m); return r;
+}
+
+const RAW = [
+  { mes:'Febrero',    tipo:'6-12', plazo:[6,12], sub:new Date(2026,1,3),   lim:new Date(2026,0,19),  emi:new Date(2026,1,6) },
+  { mes:'Febrero',    tipo:'3-9',  plazo:[3,9],  sub:new Date(2026,1,10),  lim:new Date(2026,0,26),  emi:new Date(2026,1,13) },
+  { mes:'Marzo',      tipo:'6-12', plazo:[6,12], sub:new Date(2026,2,3),   lim:new Date(2026,1,9),   emi:new Date(2026,2,6) },
+  { mes:'Marzo',      tipo:'3-9',  plazo:[3,9],  sub:new Date(2026,2,10),  lim:new Date(2026,1,16),  emi:new Date(2026,2,13) },
+  { mes:'Abril',      tipo:'6-12', plazo:[6,12], sub:new Date(2026,3,7),   lim:new Date(2026,2,9),   emi:new Date(2026,3,10) },
+  { mes:'Abril',      tipo:'3-9',  plazo:[3,9],  sub:new Date(2026,3,14),  lim:new Date(2026,2,16),  emi:new Date(2026,3,17) },
+  { mes:'Mayo',       tipo:'6-12', plazo:[6,12], sub:new Date(2026,4,5),   lim:new Date(2026,3,13),  emi:new Date(2026,4,8) },
+  { mes:'Mayo',       tipo:'3-9',  plazo:[3,9],  sub:new Date(2026,4,12),  lim:new Date(2026,3,20),  emi:new Date(2026,4,15) },
+  { mes:'Junio',      tipo:'6-12', plazo:[6,12], sub:new Date(2026,5,2),   lim:new Date(2026,4,11),  emi:new Date(2026,5,5) },
+  { mes:'Junio',      tipo:'3-9',  plazo:[3,9],  sub:new Date(2026,5,9),   lim:new Date(2026,4,18),  emi:new Date(2026,5,12) },
+  { mes:'Julio',      tipo:'6-12', plazo:[6,12], sub:new Date(2026,6,7),   lim:new Date(2026,5,8),   emi:new Date(2026,6,10) },
+  { mes:'Julio',      tipo:'3-9',  plazo:[3,9],  sub:new Date(2026,6,14),  lim:new Date(2026,5,15),  emi:new Date(2026,6,17) },
+  { mes:'Agosto',     tipo:'6-12', plazo:[6,12], sub:new Date(2026,7,4),   lim:new Date(2026,6,13),  emi:new Date(2026,7,7) },
+  { mes:'Agosto',     tipo:'3-9',  plazo:[3,9],  sub:new Date(2026,7,11),  lim:new Date(2026,6,20),  emi:new Date(2026,7,14) },
+  { mes:'Septiembre', tipo:'6-12', plazo:[6,12], sub:new Date(2026,8,1),   lim:new Date(2026,7,10),  emi:new Date(2026,8,4) },
+  { mes:'Septiembre', tipo:'3-9',  plazo:[3,9],  sub:new Date(2026,8,8),   lim:new Date(2026,7,17),  emi:new Date(2026,8,11) },
+  { mes:'Octubre',    tipo:'6-12', plazo:[6,12], sub:new Date(2026,9,6),   lim:new Date(2026,8,7),   emi:new Date(2026,9,9) },
+  { mes:'Octubre',    tipo:'3-9',  plazo:[3,9],  sub:new Date(2026,9,13),  lim:new Date(2026,8,14),  emi:new Date(2026,9,16) },
+  { mes:'Noviembre',  tipo:'6-12', plazo:[6,12], sub:new Date(2026,10,3),  lim:new Date(2026,9,13),  emi:new Date(2026,10,6) },
+  { mes:'Noviembre',  tipo:'3-9',  plazo:[3,9],  sub:new Date(2026,10,10), lim:new Date(2026,9,19),  emi:new Date(2026,10,13) },
+  { mes:'Diciembre',  tipo:'6-12', plazo:[6,12], sub:new Date(2026,11,1),  lim:new Date(2026,10,9),  emi:new Date(2026,11,4) },
+  { mes:'Diciembre',  tipo:'3-9',  plazo:[3,9],  sub:new Date(2026,11,9),  lim:new Date(2026,10,16), emi:new Date(2026,11,11) },
+  { mes:'Enero 2027', tipo:'6-12', plazo:[6,12], sub:new Date(2027,0,12),  lim:new Date(2026,11,7),  emi:new Date(2027,0,15) },
+  { mes:'Enero 2027', tipo:'3-9',  plazo:[3,9],  sub:new Date(2027,0,19),  lim:new Date(2026,11,14), emi:new Date(2027,0,22) },
+];
+
+// Enrich with amortización dates per plazo
+const SUBASTAS = RAW.map((r, i) => ({
+  ...r,
+  id: i,
+  amors: r.plazo.map(p => addMonths(r.emi, p))  // one amort date per plazo
+}));
+
+// ── UTILS ─────────────────────────────────────────
+const sod  = d => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+const fmt  = d => `${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}/${d.getFullYear()}`;
+const fmtS = d => `${d.getDate()} ${MONTHS[d.getMonth()].slice(0,3)}`;
+const fmtEur = n => n.toLocaleString('es-ES', { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + ' €';
+const fmtNum = n => n.toLocaleString('es-ES', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+const diffDays = (a, b) => Math.ceil((sod(b) - sod(a)) / 86400000);
+
+// ── STORAGE ───────────────────────────────────────
+let holdings = [];
+try { holdings = JSON.parse(localStorage.getItem('t_h2') || '[]'); } catch(e){}
+function save() { try { localStorage.setItem('t_h2', JSON.stringify(holdings)); } catch(e){} }
+
+// ── TABS ──────────────────────────────────────────
+function showTab(id, btn) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('page-' + id).classList.add('active');
+  if (id === 'port') { fillSelect(); renderPortfolio(); }
+  switchLayout();
+}
+
+// ── CALENDAR ─────────────────────────────────────
+let curFilter = 'all';
+function setFilter(f, btn) {
+  curFilter = f;
+  document.querySelectorAll('.chip').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderCal();
+  renderCalCards();
+}
+
+function dateCell(d) {
+  return `<div class="td-date">
+    <div class="date-num">${d.getDate()}</div>
+    <div><div class="date-mo">${MONTHS[d.getMonth()].slice(0,3)} ${d.getFullYear()}</div></div>
+  </div>`;
+}
+
+function miniDate(d, label) {
+  return `<div class="date-mini"><div class="dm-main">${fmt(d)}</div><div class="dm-sub">${label}</div></div>`;
+}
+
+function renderCal() {
+  const today = sod(new Date());
+  const tbody = document.getElementById('cal-body');
+  tbody.innerHTML = '';
+  let firstUp = true, lastMes = null;
+
+  SUBASTAS.forEach(row => {
+    const sub = sod(row.sub);
+    const isPast = sub < today;
+    const isNext = !isPast && firstUp;
+    if (isNext) firstUp = false;
+
+    if (curFilter === 'upcoming' && isPast) return;
+    if (curFilter === '6-12' && row.tipo !== '6-12') return;
+    if (curFilter === '3-9'  && row.tipo !== '3-9')  return;
+
+    if (row.mes !== lastMes) {
+      const mtr = document.createElement('tr');
+      mtr.className = 'mhdr';
+      mtr.innerHTML = `<td colspan="6">${row.mes}</td>`;
+      tbody.appendChild(mtr);
+      lastMes = row.mes;
+    }
+
+    const d = diffDays(today, sub);
+    let st = '';
+    if (isPast)      st = `<span class="sb sb-past"><span class="sb-dot"></span>Celebrada</span>`;
+    else if (isNext) st = `<span class="sb sb-next"><span class="sb-dot"></span>${d === 0 ? 'Hoy' : 'En ' + d + ' días'}</span>`;
+    else             st = `<span class="sb sb-soon"><span class="sb-dot"></span>En ${d} días</span>`;
+
+    const bc = row.tipo === '6-12' ? 'badge-r' : 'badge-b';
+    const badges = row.plazo.map(p => `<span class="badge ${bc}">${p}M</span>`).join('');
+
+    // Amortización: show all plazo dates
+    const amorStr = row.amors.map((a, i) =>
+      `<div class="dm-main">${fmt(a)}</div><div class="dm-sub">${row.plazo[i]}M</div>`
+    ).join('<div style="height:4px"></div>');
+
+    const tr = document.createElement('tr');
+    if (isPast) tr.classList.add('past');
+    if (isNext) tr.classList.add('next-row');
+    tr.innerHTML = `
+      <td><div class="badges">${badges}</div></td>
+      <td>${dateCell(row.sub)}</td>
+      <td class="col-lim">${miniDate(row.lim, 'Límite online')}</td>
+      <td class="col-emi">${miniDate(row.emi, 'Emisión')}</td>
+      <td class="col-amor"><div class="date-mini">${amorStr}</div></td>
+      <td>${st}</td>`;
+    tbody.appendChild(tr);
+  });
+}
+
+function initCalStats() {
+  const today = sod(new Date());
+  const past = SUBASTAS.filter(r => sod(r.sub) < today).length;
+  const pend = SUBASTAS.filter(r => sod(r.sub) >= today).length;
+  const next = SUBASTAS.find(r => sod(r.sub) >= today);
+  document.getElementById('s-past').textContent = past;
+  document.getElementById('s-pend').textContent = pend;
+  if (next) {
+    const d = diffDays(today, next.sub);
+    document.getElementById('s-days').textContent = d === 0 ? 'Hoy' : d + ' días';
+    document.getElementById('s-next-lbl').textContent = `${fmtS(next.sub)} · ${next.plazo.join(' y ')}M`;
+    document.getElementById('next-banner').style.display = 'flex';
+    document.getElementById('nx-title').textContent = `Próxima — ${next.sub.getDate()} de ${MONTHS[next.sub.getMonth()]}`;
+    document.getElementById('nx-detail').textContent = `Límite online: ${fmt(next.lim)} · Emisión: ${fmt(next.emi)} · Amortización: ${next.amors.map((a,i)=>next.plazo[i]+'M→'+fmt(a)).join('  ')}`;
+    const bc = next.tipo === '6-12' ? 'badge-r' : 'badge-b';
+    document.getElementById('nx-chips').innerHTML = next.plazo.map(p => `<span class="badge ${bc}">${p}M</span>`).join('');
+    document.getElementById('nx-days').textContent = d === 0 ? 'Hoy' : `En ${d} días`;
+  }
+}
+
+// ── PORTFOLIO ─────────────────────────────────────
+const BAR_COLORS = ['#3B82F6','#F87171','#34D399','#FBBF24','#A78BFA','#22D3EE','#FB7185','#FB923C'];
+
+function fillSelect() {
+  const sel = document.getElementById('f-subasta');
+  const today = sod(new Date());
+  sel.innerHTML = '<option value="">Selecciona subasta…</option>';
+  SUBASTAS.forEach(s => {
+    const opt = document.createElement('option');
+    opt.value = s.id;
+    const mark = sod(s.sub) < today ? ' ✓' : '';
+    opt.textContent = `${s.mes} — ${s.plazo.join(' y ')}M  (${fmt(s.sub)})${mark}`;
+    sel.appendChild(opt);
+  });
+  sel.onchange = () => {
+    const s = SUBASTAS[+sel.value];
+    if (s) {
+      // Default to longest plazo amort
+      const maxIdx = s.plazo.indexOf(Math.max(...s.plazo));
+      document.getElementById('f-venc').value = s.amors[maxIdx].toISOString().split('T')[0];
+    }
+  };
+}
+
+function addHolding() {
+  const sid   = document.getElementById('f-subasta').value;
+  const imp   = parseImporte();
+  const venc  = document.getElementById('f-venc').value;
+  const notas = document.getElementById('f-notas').value.trim();
+  const errEl = document.getElementById('form-err');
+
+  if (!sid)                            { showErr('Selecciona una subasta.'); return; }
+  if (!imp || imp < 1000 || imp % 1000) { showErr('Importe: mínimo 1.000 €, múltiplo de 1.000.'); return; }
+  if (!venc)                           { showErr('Indica la fecha de amortización.'); return; }
+  errEl.style.display = 'none';
+
+  const s = SUBASTAS[+sid];
+  holdings.push({
+    uid:     Date.now(),
+    subId:   +sid,
+    mes:     s.mes,
+    tipo:    s.tipo,
+    plazo:   s.plazo,
+    subDate: s.sub.toISOString(),
+    emiDate: s.emi.toISOString(),
+    limDate: s.lim.toISOString(),
+    importe: imp,
+    venc:    venc,
+    notas:   notas
+  });
+  save();
+
+  ['f-subasta','f-venc','f-notas'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('f-importe').value = '';
+  renderPortfolio();
+}
+
+function showErr(msg) { const e = document.getElementById('form-err'); e.textContent = msg; e.style.display = 'block'; }
+
+function deleteHolding(uid) { holdings = holdings.filter(h => h.uid !== uid); save(); renderPortfolio(); }
+
+function renderPortfolio() {
+  const today = sod(new Date());
+  const total = holdings.reduce((a, h) => a + h.importe, 0);
+  const active = holdings.filter(h => sod(new Date(h.venc)) >= today);
+  const soon   = holdings.filter(h => { const d = diffDays(today, new Date(h.venc)); return d >= 0 && d <= 30; });
+  const soonAmt= soon.reduce((a, h) => a + h.importe, 0);
+
+  document.getElementById('p-total').textContent  = total  ? fmtEur(total)  : '—';
+  document.getElementById('p-count').textContent  = holdings.length || '—';
+  document.getElementById('p-month').textContent  = soonAmt ? fmtEur(soonAmt) : '—';
+
+  const nextH = [...holdings].filter(h => sod(new Date(h.venc)) >= today).sort((a,b)=>new Date(a.venc)-new Date(b.venc))[0];
+  if (nextH) {
+    const d = diffDays(today, new Date(nextH.venc));
+    document.getElementById('p-next-days').textContent = d === 0 ? 'Hoy' : d + ' días';
+    document.getElementById('p-next-lbl').textContent  = fmt(new Date(nextH.venc));
+  } else {
+    document.getElementById('p-next-days').textContent = '—';
+    document.getElementById('p-next-lbl').textContent  = 'sin posiciones activas';
+  }
+
+  // Table
+  const tbody = document.getElementById('hold-body');
+  tbody.innerHTML = '';
+  if (!holdings.length) {
+    tbody.innerHTML = `<tr><td colspan="8"><div class="empty-state"><span class="eicon">📋</span>Aún no has registrado ninguna posición.<br>Usa el formulario de arriba para añadir tu primera inversión.</div></td></tr>`;
+  } else {
+    const sorted = [...holdings].sort((a,b) => new Date(a.venc) - new Date(b.venc));
+    sorted.forEach(h => {
+      const vd    = sod(new Date(h.venc));
+      const subD  = new Date(h.subDate);
+      const emiD  = new Date(h.emiDate);
+      const isPast= vd < today;
+      const d     = diffDays(today, vd);
+      const bc    = h.tipo === '6-12' ? 'badge-r' : 'badge-b';
+
+      // progress bar: from emission to amort
+      const totalDays = diffDays(emiD, vd);
+      const elapsed   = diffDays(emiD, isPast ? vd : today);
+      const pct       = Math.min(100, Math.max(0, Math.round(elapsed / totalDays * 100)));
+      const barColor  = isPast ? 'var(--text-3)' : d <= 30 ? 'var(--amber)' : 'var(--blue)';
+
+      let st = '';
+      if (isPast)   st = `<span class="sb sb-matured"><span class="sb-dot"></span>Amortizada</span>`;
+      else if (d<=30) st = `<span class="sb sb-maturing"><span class="sb-dot"></span>Vence pronto</span>`;
+      else          st = `<span class="sb sb-active"><span class="sb-dot"></span>Activa</span>`;
+
+      const tr = document.createElement('tr');
+      if (isPast) tr.classList.add('past');
+      tr.innerHTML = `
+        <td>
+          <div style="font-size:13px;font-weight:500">${h.mes}</div>
+          <div style="display:flex;gap:4px;margin-top:3px">${h.plazo.map(p=>`<span class="badge ${bc}">${p}M</span>`).join('')}</div>
+          ${h.notas ? `<div style="font-size:10px;color:var(--text-3);margin-top:2px">${h.notas}</div>` : ''}
+        </td>
+        <td style="font-size:15px;font-weight:600">${fmtEur(h.importe)}</td>
+        <td><div class="date-mini"><div class="dm-main">${fmt(subD)}</div><div class="dm-sub">Subasta</div></div></td>
+        <td><div class="date-mini"><div class="dm-main">${fmt(emiD)}</div><div class="dm-sub">Emisión</div></div></td>
+        <td><div class="date-mini"><div class="dm-main">${fmt(vd)}</div><div class="dm-sub">${isPast ? 'Vencida' : d === 0 ? 'Hoy' : 'En ' + d + ' días'}</div></div></td>
+        <td style="min-width:90px">
+          <div style="display:flex;align-items:center;gap:7px">
+            <div style="flex:1;height:5px;border-radius:3px;background:var(--surface-3);overflow:hidden">
+              <div style="height:100%;width:${pct}%;background:${barColor};border-radius:3px;transition:width .4s"></div>
+            </div>
+            <span style="font-size:10px;color:var(--text-3);min-width:28px">${pct}%</span>
+          </div>
+        </td>
+        <td>${st}</td>
+        <td><button class="btn-del" onclick="deleteHolding(${h.uid})" title="Eliminar">✕</button></td>`;
+      tbody.appendChild(tr);
+    });
+  }
+
+  // Timeline
+  renderTimeline(today);
+  // Mobile cards
+  if (isMobile()) renderHoldCards(today);
+}
+
+function renderTimeline(today) {
+  const ts = document.getElementById('timeline-section');
+  const tl = document.getElementById('timeline-body');
+  if (!holdings.length) { ts.style.display = 'none'; return; }
+  ts.style.display = 'block';
+
+  const byMonth = {};
+  holdings.forEach(h => {
+    const v = new Date(h.venc);
+    const key = `${v.getFullYear()}-${String(v.getMonth()+1).padStart(2,'0')}`;
+    if (!byMonth[key]) byMonth[key] = { date: v, items: [], total: 0 };
+    byMonth[key].items.push(h);
+    byMonth[key].total += h.importe;
+  });
+
+  const entries = Object.entries(byMonth).sort(([a],[b]) => a.localeCompare(b));
+  const maxAmt  = Math.max(...entries.map(([,g]) => g.total));
+  tl.innerHTML = '';
+
+  entries.forEach(([, grp], i) => {
+    const vd = sod(grp.date);
+    const isPast = vd < today;
+    const d   = diffDays(today, vd);
+    const pct = Math.round(grp.total / maxAmt * 100);
+    const col = isPast ? 'var(--text-3)' : BAR_COLORS[i % BAR_COLORS.length];
+    const div = document.createElement('div');
+    div.className = 'tl-item';
+    div.innerHTML = `
+      <div class="tl-date-col">
+        <div class="tl-date-big">${MONTHS[grp.date.getMonth()].slice(0,3)}</div>
+        <div class="tl-date-sm">${grp.date.getFullYear()}</div>
+      </div>
+      <div class="tl-bar-wrap">
+        <div class="tl-lbl">
+          <span>${grp.items.length} posición${grp.items.length>1?'es':''}</span>
+          <span style="color:var(--text-3)">${isPast?'Vencido':d===0?'Hoy':'En '+d+' días'}</span>
+        </div>
+        <div class="tl-bar-bg"><div class="tl-bar-fill" style="width:${pct}%;background:${col}"></div></div>
+      </div>
+      <div>
+        <div class="tl-amount">${fmtEur(grp.total)}</div>
+        <div class="tl-tag" style="color:${col}">${isPast?'amortizado':'activo'}</div>
+      </div>`;
+    tl.appendChild(div);
+  });
+}
+
+// ── IMPORTE INPUT FORMATTING ──────────────────────
+function setupImporteInput() {
+  const el = document.getElementById('f-importe');
+  el.addEventListener('input', () => {
+    const raw = el.value.replace(/\./g, '').replace(/[^\d]/g, '');
+    if (!raw) { el.value = ''; return; }
+    const n = parseInt(raw, 10);
+    const cursor = el.selectionStart;
+    const prevLen = el.value.length;
+    el.value = fmtNum(n);
+    // keep cursor roughly in place
+    const diff = el.value.length - prevLen;
+    el.setSelectionRange(cursor + diff, cursor + diff);
+  });
+}
+
+function parseImporte() {
+  const raw = document.getElementById('f-importe').value.replace(/\./g,'').replace(/[^\d]/g,'');
+  return raw ? parseInt(raw, 10) : NaN;
+}
+
+const isMobile = () => window.innerWidth <= 600;
+
+function switchLayout() {
+  const mob = isMobile();
+  // Calendar
+  document.getElementById('cal-table').style.display  = mob ? 'none' : '';
+  document.getElementById('cal-cards').style.display  = mob ? 'flex' : 'none';
+  // Portfolio
+  document.getElementById('port-table').style.display = mob ? 'none' : '';
+  document.getElementById('hold-cards').style.display = mob ? 'flex' : 'none';
+}
+
+// ── MOBILE CALENDAR CARDS ─────────────────────────
+function renderCalCards() {
+  const today = sod(new Date());
+  const container = document.getElementById('cal-cards');
+  container.innerHTML = '';
+  let firstUp = true, lastMes = null;
+
+  SUBASTAS.forEach(row => {
+    const sub = sod(row.sub);
+    const isPast = sub < today;
+    const isNext = !isPast && firstUp;
+    if (isNext) firstUp = false;
+
+    if (curFilter === 'upcoming' && isPast) return;
+    if (curFilter === '6-12' && row.tipo !== '6-12') return;
+    if (curFilter === '3-9'  && row.tipo !== '3-9')  return;
+
+    if (row.mes !== lastMes) {
+      const mh = document.createElement('div');
+      mh.className = 'cal-month-header';
+      mh.textContent = row.mes;
+      container.appendChild(mh);
+      lastMes = row.mes;
+    }
+
+    const d = diffDays(today, sub);
+    let st = '';
+    if (isPast)      st = `<span class="sb sb-past"><span class="sb-dot"></span>Celebrada</span>`;
+    else if (isNext) st = `<span class="sb sb-next"><span class="sb-dot"></span>${d===0?'Hoy':'En '+d+'d'}</span>`;
+    else             st = `<span class="sb sb-soon"><span class="sb-dot"></span>En ${d}d</span>`;
+
+    const bc = row.tipo === '6-12' ? 'badge-r' : 'badge-b';
+    const badges = row.plazo.map(p => `<span class="badge ${bc}">${p}M</span>`).join('');
+
+    // amort: show max plazo only on mobile for brevity
+    const maxIdx = row.plazo.indexOf(Math.max(...row.plazo));
+    const amorMaxDate = row.amors[maxIdx];
+
+    const card = document.createElement('div');
+    card.className = `cal-card${isPast?' past':''}${isNext?' next-row':''}`;
+    card.innerHTML = `
+      <div class="cal-card-top">
+        <div class="cal-card-date">
+          <div class="cal-card-dn">${row.sub.getDate()}</div>
+          <div class="cal-card-dm">
+            
+            <div class="cal-card-mo">${MONTHS[row.sub.getMonth()].slice(0,3)} ${row.sub.getFullYear()}</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px">
+          <div class="badges">${badges}</div>
+          ${st}
+        </div>
+      </div>
+      <div class="cal-card-dates">
+        <div class="ccd-item">
+          <div class="ccd-lbl">Límite online</div>
+          <div class="ccd-val">${fmt(row.lim)}</div>
+        </div>
+        <div class="ccd-item">
+          <div class="ccd-lbl">Emisión</div>
+          <div class="ccd-val">${fmt(row.emi)}</div>
+        </div>
+        <div class="ccd-item">
+          <div class="ccd-lbl">Amortiz. ${Math.max(...row.plazo)}M</div>
+          <div class="ccd-val">${fmt(amorMaxDate)}</div>
+        </div>
+      </div>`;
+    container.appendChild(card);
+  });
+}
+
+// ── MOBILE PORTFOLIO CARDS ────────────────────────
+function renderHoldCards(today) {
+  const container = document.getElementById('hold-cards');
+  container.innerHTML = '';
+
+  if (!holdings.length) {
+    container.innerHTML = `<div class="empty-state"><span class="eicon">📋</span>Aún no has registrado ninguna posición.<br>Usa el formulario de arriba para añadir tu primera inversión.</div>`;
+    return;
+  }
+
+  const sorted = [...holdings].sort((a,b) => new Date(a.venc)-new Date(b.venc));
+  sorted.forEach(h => {
+    const vd     = sod(new Date(h.venc));
+    const subD   = new Date(h.subDate);
+    const emiD   = new Date(h.emiDate);
+    const isPast = vd < today;
+    const d      = diffDays(today, vd);
+    const bc     = h.tipo === '6-12' ? 'badge-r' : 'badge-b';
+
+    const totalDays = diffDays(emiD, vd);
+    const elapsed   = diffDays(emiD, isPast ? vd : today);
+    const pct       = Math.min(100, Math.max(0, Math.round(elapsed/totalDays*100)));
+    const barColor  = isPast ? 'var(--text-3)' : d<=30 ? 'var(--amber)' : 'var(--blue)';
+
+    let st = '';
+    if (isPast)    st = `<span class="sb sb-matured"><span class="sb-dot"></span>Amortizada</span>`;
+    else if (d<=30) st = `<span class="sb sb-maturing"><span class="sb-dot"></span>Vence pronto</span>`;
+    else           st = `<span class="sb sb-active"><span class="sb-dot"></span>Activa</span>`;
+
+    const card = document.createElement('div');
+    card.className = `hold-card${isPast?' past':''}`;
+    card.innerHTML = `
+      <div class="hold-card-top">
+        <div>
+          <div class="hold-card-title">${h.mes}</div>
+          <div style="display:flex;gap:4px;margin-top:4px">${h.plazo.map(p=>`<span class="badge ${bc}">${p}M</span>`).join('')}</div>
+          ${h.notas?`<div style="font-size:10px;color:var(--text-3);margin-top:3px">${h.notas}</div>`:''}
+        </div>
+        <div style="text-align:right">
+          <div class="hold-card-amount">${fmtEur(h.importe)}</div>
+          <div style="margin-top:6px">${st}</div>
+        </div>
+      </div>
+      <div class="hold-card-dates">
+        <div class="ccd-item">
+          <div class="ccd-lbl">Subasta</div>
+          <div class="ccd-val">${fmt(subD)}</div>
+        </div>
+        <div class="ccd-item">
+          <div class="ccd-lbl">Emisión</div>
+          <div class="ccd-val">${fmt(emiD)}</div>
+        </div>
+        <div class="ccd-item">
+          <div class="ccd-lbl">Amortización</div>
+          <div class="ccd-val">${fmt(vd)}</div>
+          <div style="font-size:10px;color:var(--text-3)">${isPast?'Vencida':d===0?'Hoy':'En '+d+'d'}</div>
+        </div>
+      </div>
+      <div class="hold-card-progress">
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+          <span style="font-size:10px;color:var(--text-3)">Progreso</span>
+          <span style="font-size:10px;color:var(--text-3)">${pct}%</span>
+        </div>
+        <div class="hold-card-prog-bar"><div class="hold-card-prog-fill" style="width:${pct}%;background:${barColor}"></div></div>
+      </div>
+      <div class="hold-card-bottom">
+        <span></span>
+        <button class="btn-del" onclick="deleteHolding(${h.uid})" title="Eliminar">✕ Eliminar</button>
+      </div>`;
+    container.appendChild(card);
+  });
+}
+
+// ── INIT ──────────────────────────────────────────
+initCalStats();
+renderCal();
+renderCalCards();
+fillSelect();
+setupImporteInput();
+renderPortfolio();
+switchLayout();
+window.addEventListener('resize', () => { switchLayout(); });
+</script>
+</body>
+</html>
