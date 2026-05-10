@@ -184,7 +184,7 @@ td:last-child { text-align: right; }
 .fmode-btn { padding: 5px 14px; border-radius: 20px; border: 1px solid var(--border); background: var(--surface); font-size: 12px; font-weight: 500; color: var(--text-2); cursor: pointer; font-family: inherit; transition: all 0.12s; }
 .fmode-btn:hover { border-color: var(--blue); color: var(--blue); }
 .fmode-btn.active { background: var(--blue-l); border-color: var(--blue-m); color: var(--blue); }
-.form-grid-free { display: grid; grid-template-columns: 1.5fr 1fr 1fr auto; gap: 10px; align-items: end; }
+.form-grid-free { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr auto; gap: 10px; align-items: end; }
 
 /* holdings */
 .btn-del { background: none; border: none; cursor: pointer; padding: 4px 7px; color: var(--text-3); border-radius: 6px; font-size: 14px; line-height: 1; transition: all 0.15s; font-family: inherit; }
@@ -468,6 +468,10 @@ td:last-child { text-align: right; }
           <div class="fgroup">
             <label>Fecha amortización</label>
             <input type="date" id="f-venc-free">
+          </div>
+          <div class="fgroup">
+            <label>Notas (opcional)</label>
+            <input type="text" id="f-notas-free" placeholder="Ej: reinversión">
           </div>
           <button class="btn-add" onclick="addHoldingFree()">Añadir</button>
         </div>
@@ -911,6 +915,7 @@ function addHoldingFree() {
   const rawI  = document.getElementById('f-importe-free').value.replace(/\./g,'').replace(/[^\d]/g,'');
   const imp   = rawI ? parseInt(rawI, 10) : NaN;
   const venc  = document.getElementById('f-venc-free').value;
+  const notas = document.getElementById('f-notas-free').value.trim();
   const errEl = document.getElementById('form-err');
 
   if (!desc)                            { showErr('Introduce una descripción.'); return; }
@@ -930,13 +935,14 @@ function addHoldingFree() {
     limDate: null,
     importe: imp,
     venc:    venc,
-    notas:   ''
+    notas:   notas
   });
   save();
 
   document.getElementById('f-desc').value = '';
   document.getElementById('f-importe-free').value = '';
   document.getElementById('f-venc-free').value = '';
+  document.getElementById('f-notas-free').value = '';
   renderPortfolio();
 }
 
