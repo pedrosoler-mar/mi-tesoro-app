@@ -179,6 +179,12 @@ td:last-child { text-align: right; }
 .btn-add:active { transform: scale(0.98); }
 .form-err { font-size: 11px; color: var(--red); margin-top: 8px; display: none; }
 
+/* backup bar */
+.backup-bar { display:flex; align-items:center; justify-content:space-between; gap:12px; background:var(--surface); border:1px solid var(--border); border-radius:var(--r); padding:11px 16px; margin-bottom:16px; flex-wrap:wrap; }
+.backup-info { font-size:12px; color:var(--text-2); }
+.btn-backup { padding:6px 14px; border-radius:7px; border:1px solid var(--border); background:var(--surface-2); font-size:12px; font-weight:500; color:var(--text-2); cursor:pointer; font-family:inherit; transition:all .15s; }
+.btn-backup:hover { border-color:var(--blue); color:var(--blue); background:var(--blue-l); }
+
 /* form mode toggle */
 .form-mode-toggle { display: flex; gap: 6px; margin-bottom: 16px; }
 .fmode-btn { padding: 5px 14px; border-radius: 20px; border: 1px solid var(--border); background: var(--surface); font-size: 12px; font-weight: 500; color: var(--text-2); cursor: pointer; font-family: inherit; transition: all 0.12s; }
@@ -415,6 +421,15 @@ td:last-child { text-align: right; }
   <div class="page" id="page-port">
     <h1 class="page-title">Mi cartera de Letras</h1>
     <p class="page-desc">Registra las subastas a las que has acudido, el importe invertido y su vencimiento.</p>
+
+    <div class="backup-bar">
+      <span class="backup-info">💾 Los datos se guardan en este navegador. Usa exportar/importar para llevarlos a otro dispositivo.</span>
+      <div style="display:flex;gap:8px;flex-shrink:0">
+        <button class="btn-backup" onclick="exportData()">⬇ Exportar</button>
+        <button class="btn-backup btn-import-trigger" onclick="document.getElementById('import-file').click()">⬆ Importar</button>
+        <input type="file" id="import-file" accept=".json" style="display:none" onchange="importData(event)">
+      </div>
+    </div>
 
     <div class="port-stats">
       <div class="stat"><div class="stat-lbl">Capital invertido</div><div class="stat-val" id="p-total">—</div><div class="stat-sub">nominal total</div></div>
@@ -901,7 +916,42 @@ function renderTimeline(today) {
   });
 }
 
-// ── FORM MODE ─────────────────────────────────────
+// ── EXPORT / IMPORT ───────────────────────────────
+function exportData() {
+  const json = JSON.stringify(holdings, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  const date = new Date();
+  const stamp = `${date.getFullYear()}${String(date.getMonth()+1).padStart(2,'0')}${String(date.getDate()).padStart(2,'0')}`;
+  a.href = url;
+  a.download = `cartera-tesoro-${stamp}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function importData(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (!Array.isArray(data)) throw new Error('Formato incorrecto');
+      holdings = data;
+      save();
+      renderPortfolio();
+      if (isMobile()) renderHoldCards(sod(new Date()));
+      alert(`✓ Importadas ${holdings.length} posiciones correctamente.`);
+    } catch(err) {
+      alert('Error al importar: el fichero no tiene el formato correcto.');
+    }
+  };
+  reader.readAsText(file);
+  event.target.value = ''; // reset so same file can be re-imported
+}
+
+
 function setFormMode(mode) {
   document.getElementById('form-cal').style.display  = mode === 'cal'  ? '' : 'none';
   document.getElementById('form-free').style.display = mode === 'free' ? '' : 'none';
